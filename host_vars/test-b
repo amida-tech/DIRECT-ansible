@@ -1,0 +1,16 @@
+---
+
+blah_param: something2
+
+# Domain name for this Direct server
+# (Secure e-mail will be to/from @direct_domain_name)
+# A best practice is to use "direct".yournormaldomain.tld
+"direct_domain_name": "test-b.amida-demo.com"
+
+# Direct e-mail address of the postmaster for your Direct domain
+# A best practice is to use "postmaster"@direct_domain_name
+"postmaster": "postmaster@test-b.amida-demo.com"
+
+# Name server for your direct_domain
+"direct_name_server": "ns-test-b.amida-demo.com"
+

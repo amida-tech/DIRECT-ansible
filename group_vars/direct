@@ -1,0 +1,39 @@
+---
+
+blah_group_param: something
+
+
+# The server will have a single inbox where all messages are routed
+# The first item in the email_users list defines the credentials
+# for that catchall account.
+"email_users": [{
+    "username": "catchall",
+    "password": "password"
+}]
+
+# If you don't already have a certificate, fill in your details
+# below to generate a self-signed certificate for your Direct domain
+"certificate": {
+    "country": "US",
+    "state": "VA",
+    "city": "Arlington",
+    "organization": "Amida (DEMO)"
+}
+
+# If you have an existing certificate, you can load it here
+# instead of auto-generating a self-signed cert. Just point
+# to a PKCS12 (cert + private key) file as:
+# "certificate_file": "/path/to/my-cert-with-key.p12"
+
+# Trust bundles to support, by default. For testing, use Test bundles.
+"trust_bundles": [{
+     "name": "Providers-Test Blue Button Bundle",
+     "url": "https://secure.bluebuttontrust.org/p7b.ashx?id=cb300117-3a4a-e211-8bc3-78e3b5114607"
+}]
+
+##
+# These are fixed configuration parameters.
+# Don't modify unless you know what you're doing :-)
+"catchall": true
+"java_home": "/usr/lib/jvm/java-7-openjdk-amd64"
+"jri_zip_file": "http://repo.typesafe.com/typesafe/repo/org/nhind/direct-project-stock/2.1.1/direct-project-stock-2.1.1.tar.gz"

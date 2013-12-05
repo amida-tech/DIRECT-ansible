@@ -1,0 +1,25 @@
+##
+# Ansible playbook for setting up a DIRECT development server on EC2 Ubuntu 12.04 LTS 64bit medium instance.
+#
+
+---
+## Global setup
+- hosts: direct
+  user: ubuntu
+  tasks:
+    - include: global_setup.yml
+
+- hosts: direct
+  user: ubuntu
+  # replaced with group_vars and hosts_vars files
+  #vars_files:
+  #  - settings/direct_server.yml
+  #  - settings/fixed.yml
+  tasks:
+    - include: direct_server.yml
+
+## Global cleanup
+- hosts: direct
+  user: ubuntu
+  tasks:
+    - include: global_cleanup.yml
