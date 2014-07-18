@@ -1,6 +1,6 @@
 ---
 - name: General | Install required packages.
-  action: apt pkg=$item state=installed update_cache=yes
+  action: apt pkg={{item}} state=installed update_cache=yes
   tags: common
   with_items:
     - python-software-properties

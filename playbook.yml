@@ -4,13 +4,11 @@
 
 ---
 ## Global setup
-- hosts: direct
-  user: ubuntu
+- hosts: all
   tasks:
     - include: global_setup.yml
 
-- hosts: direct
-  user: ubuntu
+- hosts: all
   # replaced with group_vars and hosts_vars files
   #vars_files:
   #  - settings/direct_server.yml
@@ -19,7 +17,6 @@
     - include: direct_server.yml
 
 ## Global cleanup
-- hosts: direct
-  user: ubuntu
+- hosts: all
   tasks:
     - include: global_cleanup.yml

@@ -101,9 +101,9 @@
   action: wait_for port=8081 delay=3 state=started timeout=600
   sudo: true
 
-- name: Direct | Wait for Tomcat config-service
-  action: get_url url=http://localhost:8081/config-service/ dest=/dev/null force=yes
-  sudo: true
+#- name: Direct | Wait for Tomcat config-service
+#  action: get_url url=http://localhost:8081/config-service/ dest=/dev/null force=yes
+#  sudo: true
 
 - name: Direct | installer temp directory
   action: file path=/tmp/install/direct/config_client_py state=directory
