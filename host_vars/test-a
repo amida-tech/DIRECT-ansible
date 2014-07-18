@@ -1,5 +1,7 @@
 ---
 
+"location":"aws"
+
 blah_param: something
 
 # Domain name for this Direct server

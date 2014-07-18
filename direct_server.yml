@@ -20,10 +20,18 @@
   ignore_errors: true
   register: ec2_public_ip
   sudo: true
+  when: location == "aws"
 
 - name: Register EC2 IP
   action: set_fact public_ip="{{ec2_public_ip.content|default(ansible_default_ipv4.address)}}"
   sudo: true
+  when: location == "aws"
+
+- name: Register local IP
+  action: set_fact public_ip="{{local_ip}}"
+  sudo: true
+  when: location == "vagrant"
+
 
 - name: Direct | PIP packagse
   action: pip name={{item}}

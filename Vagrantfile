@@ -35,6 +35,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Default value: false
   # config.ssh.forward_agent = true
 
+config.vm.provider "virtualbox" do |v|
+  v.memory = 2048
+  v.cpus = 2
+end
+
   config.vm.provision "ansible" do |ansible|
       ansible.playbook = "playbook.yml"
       ansible.inventory_path = "hosts"

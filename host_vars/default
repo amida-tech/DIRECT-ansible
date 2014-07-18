@@ -17,6 +17,11 @@ blah_param: something
 
 blah_group_param: something
 
+#"location":"aws"
+
+"location": "vagrant"
+
+"local_ip": "192.168.33.10"
 
 # The server will have a single inbox where all messages are routed
 # The first item in the email_users list defines the credentials
