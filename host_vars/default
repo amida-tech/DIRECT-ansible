@@ -5,14 +5,14 @@ blah_param: something
 # Domain name for this Direct server
 # (Secure e-mail will be to/from @direct_domain_name)
 # A best practice is to use "direct".yournormaldomain.tld
-"direct_domain_name": "local.amida-demo.com"
+"direct_domain_name": "java-ri-301.amida-demo.com"
 
 # Direct e-mail address of the postmaster for your Direct domain
 # A best practice is to use "postmaster"@direct_domain_name
-"postmaster": "postmaster@local.amida-demo.com"
+"postmaster": "postmaster@java-ri-301.amida-demo.com"
 
 # Name server for your direct_domain
-"direct_name_server": "ns-local.amida-demo.com"
+"direct_name_server": "ns-java-ri-301.amida-demo.com"
 
 
 blah_group_param: something
